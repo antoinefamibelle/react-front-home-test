@@ -29,7 +29,7 @@ import {
   summer,
   vegan,
   winter,
-} from "../Tags/TagData";
+} from "../Tags/data";
 
 const pavlova: RecipeType = {
   nom: "Pavlova",

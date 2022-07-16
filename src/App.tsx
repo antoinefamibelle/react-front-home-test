@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Recipes from "./Recipes/Recipes";
-import { TagList } from "./Tagfilter/ListeDesTags";
-import { tagList } from "./Tags/TagData";
+import { tagList } from "./Tags/data";
+import { Tags } from "./Tags/TagList";
 
 export default function App() {
   const [filters, setFilters] = useState<Array<string>>([]);
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="App">
       Liste des recettes
-      <TagList tags={tagList} />
+      <Tags tags={tagList} />;
       <div>
         {tagList.map((item) => {
           return (

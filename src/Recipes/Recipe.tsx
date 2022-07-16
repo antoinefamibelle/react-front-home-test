@@ -2,7 +2,7 @@ import { RecipeType } from "./RecipeType";
 import Steps from "../Steps/Steps";
 import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
 import { useState } from "react";
-import { Tags } from "../Tags/Tags";
+import { Tags } from "../Tags/TagList";
 
 export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
   const [showSteps, setShowSteps] = useState<Boolean>(false);
