@@ -21,16 +21,21 @@ export default function App() {
     <div className="App">
       Liste des recettes
       <TagList tags={tagList} />
-      <button onClick={() => setFilter("chocolate")}>Chocolat</button>
-      <button onClick={() => setFilter("sugar")}>Sucre</button>
-      <button onClick={() => setFilter("summer")}>Eté</button>
-      <button onClick={() => setFilter("dessert")}>Dessert</button>
-      <button onClick={() => setFilter("chocolate dessert")}>
-        dessert chocolat
-      </button>
-      <button onClick={() => setFilter("eggs free")}>Sans Oeufs</button>
-      <button onClick={() => setFilter("autumn")}> Autumn</button>
-      <button onClick={() => setFilter("vegan")}> Vegan</button>
+      <div>
+        {tagList.map((item) => {
+          return (
+            <button
+            key={item.id}
+              onClick={() => {
+                setFilter(String(item.name.en)
+              )}}
+            >
+              {item.name.en}
+            </button>
+          );
+        }
+      )}
+      </div>
       {filter === "all" && <Recipes recipes={allRecipes} />}
       {filter === "sugar" && <Recipes recipes={sugarRecipes} />}
       {filter === "summer" && <Recipes recipes={summerRecipes} />}
