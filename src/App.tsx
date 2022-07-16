@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles.css";
+import Recipes from "./Recipes/Recipes";
 import { TagList } from "./Tagfilter/ListeDesTags";
 import { tagList } from "./Tags/TagData";
 
@@ -26,6 +26,7 @@ export default function App() {
           return (
             <button
               key={item.id}
+              style={{backgroundColor: filters.includes(item.name.en) ? "cyan" : "white"}}
               onClick={() => { manageFilters(item.name.en)}}
             >
               {item.name.en}
@@ -34,6 +35,7 @@ export default function App() {
         }
       )}
       </div>
+      <Recipes filters={filters} />
     </div>
   );
 }
