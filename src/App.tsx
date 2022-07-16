@@ -9,7 +9,6 @@ export default function App() {
   const manageFilters = (filter: string) => {
     if (filters.includes(filter)) {
       setFilters(filters.filter((f) => f !== filter));
-
     }
     else {
       let newFilters: Array<string> = [...filters, filter];
