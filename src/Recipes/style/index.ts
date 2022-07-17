@@ -49,3 +49,14 @@ export const StepContainer = styled.div`
   align-content: flex-start;
   align-items: flex-start;
 `;
+
+export const ListRecipeContainer = styled.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  border-width: 10px;
+  border-color: black;
+  max-width: 800px;
+`;

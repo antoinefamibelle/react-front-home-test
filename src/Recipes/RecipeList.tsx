@@ -1,6 +1,7 @@
-import { ListOfRecipes, RecipeType } from "./types/Recipe";
+import { ListOfRecipes } from "./types/Recipe";
 import { allRecipes } from "./data";
 import Recipe from ".";
+import { ListRecipeContainer } from "./style";
 
 export const Recipes = ({ filters }: { filters: Array<string> }) => {
   const filteredRecipes = () => {
@@ -22,25 +23,14 @@ export const Recipes = ({ filters }: { filters: Array<string> }) => {
     return filtered;
   }
   return (
-    <div
-      style={{
-        padding: "10px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        backgroundColor: "whitesmoke",
-        borderWidth: "10px",
-        borderColor: "black",
-        maxWidth: "800px",
-      }}
-    >
+    <ListRecipeContainer>
       {filteredRecipes().length === 0 && (
         <div>Aucune recette ne correspond à vos filtres</div>
       )}
       {filteredRecipes().map((recipe) => (
         <Recipe key={recipe.nom} recipe={recipe} />
       ))}
-    </div>
+    </ListRecipeContainer>
   );
 };
 
