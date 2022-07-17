@@ -1,3 +1,4 @@
+import { FlexContainer } from "./styles";
 import { IngredientWithQuantityType } from "./types/Ingredient";
 
 export const Ingredient = ({
@@ -6,11 +7,7 @@ export const Ingredient = ({
   ingredientWithQuantity: IngredientWithQuantityType;
 }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <FlexContainer>
       {ingredientWithQuantity.quantity}
       {ingredientWithQuantity.unit}
       &nbsp;
@@ -21,6 +18,6 @@ export const Ingredient = ({
       ) : (
         <span>{ingredientWithQuantity.ingredient.name}</span>
       )}
-    </div>
+    </FlexContainer>
   );
 };
