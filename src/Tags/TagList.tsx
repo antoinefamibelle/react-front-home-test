@@ -1,21 +1,13 @@
 import { Tag } from "./index";
+import { TagListContainer } from "./style";
 import { TagType } from "./types/Tag";
 
 export const Tags = ({ tags }: { tags: TagType[] }) => {
   return (
-    <div
-      style={{
-        margin: "10px",
-        padding: "5px",
-        borderRadius: "3px",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-      }}
-    >
+    <TagListContainer>
       {tags.map((obj) => (
         <Tag key={obj.id} tag={obj} />
       ))}
-    </div>
+    </TagListContainer>
   );
 };
