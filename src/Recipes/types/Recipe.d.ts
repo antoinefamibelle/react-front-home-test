@@ -1,7 +1,7 @@
-import { IngredientType } from "../Ingredients/IngredientType";
-import { StepType } from "../Steps/StepType";
-import { IngredientWithQuantityType } from "../Ingredients/IngredientWithQuantityType";
-import { TagType } from "../Tags/TagType";
+import { IngredientType } from "../../Ingredients/types/Ingredient";
+import { StepType } from "../../Steps/types/Step";
+import { IngredientWithQuantityType } from "../../Ingredients/IngredientWithQuantityType";
+import { TagType } from "../../Tags/types/Tag";
 
 export type RecipeType = {
   nom: string;

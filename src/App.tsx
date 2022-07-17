@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Recipes from "./Recipes/Recipes";
+import Recipes from "./Recipes/RecipeList";
 import { tagList } from "./Tags/data";
 import { Tags } from "./Tags/TagList";
 

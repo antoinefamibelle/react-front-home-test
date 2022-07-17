@@ -5,3 +5,9 @@ export type IngredientType = {
   unit?: string;
   prefix?: string;
 };
+
+export type IngredientWithQuantityType = {
+  ingredient: IngredientType;
+  unit?: string;
+  quantity: number;
+};

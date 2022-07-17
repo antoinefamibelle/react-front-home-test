@@ -1,6 +1,6 @@
-import { ListOfRecipes, RecipeType } from "./RecipeType";
-import { allRecipes } from "./RecipeData";
-import Recipe from "./Recipe";
+import { ListOfRecipes, RecipeType } from "./types/Recipe";
+import { allRecipes } from "./data";
+import Recipe from ".";
 
 export const Recipes = ({ filters }: { filters: Array<string> }) => {
   const filteredRecipes = () => {

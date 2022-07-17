@@ -1,5 +1,5 @@
-import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
-import { StepType } from "./StepType";
+import { IngredientList } from "../Ingredients/IngredientList";
+import { StepType } from "./types/Step";
 
 export const Step = ({ etape }: { etape: StepType }) => {
   return (
@@ -22,7 +22,7 @@ export const Step = ({ etape }: { etape: StepType }) => {
         }}
       >
         {etape.ingredients && (
-          <IngredientsWithQuantity
+          <IngredientList
             ingredientsWithQuantity={etape.ingredients}
           />
         )}

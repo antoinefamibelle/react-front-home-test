@@ -1,5 +1,5 @@
-import { RecipeType } from "./RecipeType";
-import { ListOfRecipes } from "./RecipeType";
+import { RecipeType } from "../types/Recipe";
+import { ListOfRecipes } from "../types/Recipe";
 
 import {
   sugar,
@@ -14,13 +14,13 @@ import {
   salad,
   cucumber,
   feta,
-} from "../Ingredients/IngredientData";
+} from "../../Ingredients/data";
 
 import {
   stepsFondantChocolat,
   stepsPavlova,
   stepsTarteAuxPoires,
-} from "../Steps/StepData";
+} from "../../Steps/data";
 
 import {
   appetizer,
@@ -29,7 +29,7 @@ import {
   summer,
   vegan,
   winter,
-} from "../Tags/data";
+} from "../../Tags/data";
 
 const pavlova: RecipeType = {
   nom: "Pavlova",

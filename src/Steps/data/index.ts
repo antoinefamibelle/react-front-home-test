@@ -6,9 +6,9 @@ import {
   flour,
   redFruits,
   sugar,
-} from "../Ingredients/IngredientData";
+} from "../../Ingredients/data";
 
-import { StepType as StepType } from "./StepType";
+import { StepType as StepType } from "../types/Step";
 
 export const stepsPavlova: StepType[] = [
   {

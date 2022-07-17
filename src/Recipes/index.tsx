@@ -1,6 +1,6 @@
-import { RecipeType } from "./RecipeType";
-import Steps from "../Steps/Steps";
-import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
+import { RecipeType } from "./types/Recipe";
+import Steps from "../Steps/StepList";
+import { IngredientList } from "../Ingredients/IngredientList";
 import { useState } from "react";
 import { Tags } from "../Tags/TagList";
 
@@ -66,9 +66,7 @@ export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
             {showIngredients ? "Masquer" : "Afficher"}
           </button>
           {showIngredients && (
-            <IngredientsWithQuantity
-              ingredientsWithQuantity={recipe.ingredientsWithQuantity}
-            />
+            <IngredientList list={recipe.ingredientsWithQuantity}/>
           )}
         </div>
         <div
