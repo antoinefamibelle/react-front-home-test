@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Recipes from "./Recipes/RecipeList";
-import { tagList } from "./Tags/data";
+import { tagList } from "./Tags/data/index";
 import { Tags } from "./Tags/TagList";
 
 export default function App() {
