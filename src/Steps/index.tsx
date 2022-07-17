@@ -1,33 +1,17 @@
 import { IngredientList } from "../Ingredients/IngredientList";
+import { Container, PaddingContainer } from "./styles";
 import { StepType } from "./types/Step";
 
 export const Step = ({ etape }: { etape: StepType }) => {
   return (
-    <div
-      style={{
-        backgroundColor: "thistle",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        textAlign: "left",
-        padding: "10px",
-      }}
-    >
-      <div>
-        {etape.order}. {etape.description}
-      </div>
-      <div
-        style={{
-          padding: "10px",
-        }}
-      >
+    <Container>
+      {etape.order}. {etape.description}
+      <PaddingContainer>
         {etape.ingredients && (
-          <IngredientList
-            ingredientsWithQuantity={etape.ingredients}
-          />
+          <IngredientList list={etape.ingredients} />
         )}
-      </div>
-    </div>
+      </PaddingContainer>
+    </Container>
   );
 };
 
