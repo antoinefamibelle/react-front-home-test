@@ -1,21 +1,11 @@
 import { useState } from "react";
 import { TagType } from "./types/Tag";
+import { Container } from "./style";
 
 export const Tag = ({ tag }: { tag: TagType }) => {
-  const [selectedTag, setSelectedTag] = useState("");
   return (
-    <div
-      style={{
-        margin: "10px",
-        padding: "5px",
-        borderRadius: "3px",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        backgroundColor: `${tag.color}`
-      }}
-    >
+    <Container color={tag.color}>
       {tag.name.fr}
-    </div>
+    </Container>
   );
 };
